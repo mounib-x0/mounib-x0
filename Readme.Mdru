@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Abdelmounib | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #1f1c2c, #928dab); color: #fff; margin:0; padding:0; overflow-x:hidden;}
+header { text-align: center; padding: 50px;}
+#lang-toggle { padding: 10px 15px; font-size: 16px; border: none; border-radius: 5px; background: #00ffff; color: #000; cursor: pointer; font-weight: bold; margin-bottom: 20px;}
+#lang-toggle:hover { background: #00bbbb;}
+.skill-icons i { font-size: 40px; margin: 10px;}
+.projects-grid { display: flex; justify-content: center; flex-wrap: wrap;}
+.project-card { background: rgba(255,255,255,0.1); margin: 10px; padding: 20px; border-radius: 10px; width: 250px; text-align: center;}
+.project-card img { width: 100%; border-radius: 10px;}
+a { color: #00ffff; text-decoration: none;}
+a:hover { text-decoration: underline;}
+@media (max-width: 600px) {
+  .projects-grid { flex-direction: column; align-items: center; }
+  .project-card { width: 90%; }
+  .skill-icons i { font-size: 30px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <button id="lang-toggle">Рус / Eng</button>
+  <h1 id="greeting">Привет! / Hi!</h1>
+  <h2 id="intro">Меня зовут Mohamed Abdelmounib | Self-taught IT & UI/UX Specialist</h2>
+</header>
+
+<section id="skills">
+  <h2>Навыки / Skills</h2>
+  <div class="skill-icons">
+    <i class="fab fa-python"></i>
+    <i class="fab fa-js-square"></i>
+    <i class="fab fa-html5"></i>
+    <i class="fab fa-css3-alt"></i>
+    <i class="fab fa-linux"></i>
+    <i class="fab fa-figma"></i>
+    <i class="fab fa-adobe"></i>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Проекты / Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="https://via.placeholder.com/250x150.png?text=Project+1" alt="Project 1">
+      <h3>Portfolio Website</h3>
+      <p>Персональный сайт | Personal portfolio website</p>
+    </div>
+    <div class="project-card">
+      <img src="https://via.placeholder.com/250x150.png?text=Project+2" alt="Project 2">
+      <h3>Landing Page</h3>
+      <p>Целевая страница | Landing page for product</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Контакты / Contact</h2>
+  <p>Email: <a href="mailto:SA.MOUNIB@proton.me">SA.MOUNIB@proton.me</a></p>
+  <p>GitHub: <a href="https://github.com/mounib-x0">github.com/mounib-x0</a></p>
+</section>
+
+<script>
+const langToggle = document.getElementById('lang-toggle');
+let isRussian = true;
+
+const texts = {
+  greeting: { ru: "Привет!", en: "Hi!" },
+  intro: { ru: "Меня зовут Mohamed Abdelmounib | Самоучка в IT и UI/UX", en: "My name is Mohamed Abdelmounib | Self-taught IT & UI/UX Specialist" },
+  skillsTitle: { ru: "Навыки", en: "Skills" },
+  projectsTitle: { ru: "Проекты", en: "Projects" },
+  contactTitle: { ru: "Контакты", en: "Contact" }
+};
+
+langToggle.addEventListener('click', () => {
+  isRussian = !isRussian;
+  document.getElementById('greeting').textContent = texts.greeting[isRussian ? 'ru' : 'en'];
+  document.getElementById('intro').textContent = texts.intro[isRussian ? 'ru' : 'en'];
+  document.querySelector('#skills h2').textContent = texts.skillsTitle[isRussian ? 'ru' : 'en'];
+  document.querySelector('#projects h2').textContent = texts.projectsTitle[isRussian ? 'ru' : 'en'];
+  document.querySelector('#contact h2').textContent = texts.contactTitle[isRussian ? 'ru' : 'en'];
+});
+</script>
+
+</body>
+</html>
