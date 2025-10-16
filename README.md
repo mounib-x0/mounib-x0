@@ -1,20 +1,11 @@
 # Hi, I'm Mohamed Abdelmounib 👋
 
-I am a self-taught IT specialist with experience in programming, networking, cybersecurity, and radiology technology.  
-Passionate about solving complex problems, automating tasks, and learning new technologies.
+I am a self-taught IT specialist with experience in programming, networking, cybersecurity, radiology technology, and UI/UX design.  
+I love solving complex problems, automating tasks, designing user-friendly interfaces, and learning new technologies every day.
 
 ---
 
 ## 🛠 Skills
-- **Programming:** Python, JavaScript, HTML, CSS  
-- **Systems & Tools:** Windows, Linux, Kali Linux  
-- **Networking & Cybersecurity:** CCNA-level knowledge, network setup, monitoring, troubleshooting, vulnerability assessment  
-- **Video Editing:** Adobe Premiere Pro, DaVinci Resolve  
-- **Radiology:** Scanner operation, maintenance, workflow optimization  
-
----
-
-## 📂 Projects
-
-### Python Automation Scripts
-- Automate
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields
