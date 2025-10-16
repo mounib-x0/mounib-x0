@@ -49,8 +49,7 @@ I create solutions, automate workflows, and design intuitive interfaces for bett
 ---
 
 ## 🌐 Connect with me
-- **Email:** [SA.MOUNIB@proton.me](mailto:SA.MOUNIB@proton.me)  
-- **CV:** [Link to your CV]  
+- **Email:** [SA.MOUNIB@proton.me](mailto:SA.MOUNIB@proton.me)   
 - **GitHub:** [github.com/mounib-x0](https://github.com/mounib-x0)
 
 ---
