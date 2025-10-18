@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+"""
+HTTP Header Analyzer
+Safe educational tool — only analyze sites you are allowed to.
+Author: yourname
+"""
+
+import requests
+import sys
+
+def fetch_headers(url, timeout=8):
+    try:
+        # إضافة http:// إذا لم يكتبه المستخدم
+        if not url.startswith(("http://", "https://")):
+            url = "http://" + url
+        resp = requests.head(url, timeout=timeout, allow_redirects=True)
+        if resp.status_code == 405 or resp.headers == {}:
+            resp = requests.get(url, timeout=timeout, allow_redirects=True, stream=True)
+        return resp.status_code, resp.headers
+    except requests.exceptions.RequestException as e:
+        return None, f"Error: {e}"
+
+def pretty_print_headers(status, headers):
+    if status is None:
+        print(headers)
+        return
+    print(f"\nStatus code: {status}\n")
+    print("Headers:")
+    for k, v in headers.items():
+        print(f"{k}: {v}")
+
+def main():
+    print("=== HTTP Header Analyzer ===")
+    target = input("Enter website or domain (e.g., example.com or https://example.com): ").strip()
+    status, headers = fetch_headers(target)
+    pretty_print_headers(status, headers)
+
+if __name__ == "__main__":
+    main()
